@@ -1,0 +1,42 @@
+---
+title: MedicinalProductUndesirableEffect
+sidebar_position: 89
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import definition from '@site/static/data/resourceDefinitions/medicinalproductundesirableeffect.json';
+import { ResourcePropertiesTable, SearchParamsTable } from '@site/src/components/ResourceTables';
+
+# MedicinalProductUndesirableEffect
+
+Describe the undesirable effects of the medicinal product.
+
+<Tabs queryString="section">
+<TabItem value="schema" label="Schema" default>
+
+## Properties
+
+<ResourcePropertiesTable
+  properties={definition.properties.filter((p) => !(p.inherited && p.base.includes('Resource')))}
+/>
+
+## Search Parameters
+
+<SearchParamsTable searchParams={definition.searchParameters} />
+
+## Inherited Properties
+
+<ResourcePropertiesTable properties={definition.properties.filter((p) => p.inherited && p.base.includes('Resource'))} />
+
+</TabItem>
+  <TabItem value="usage" label="Usage">
+    <div>   <a name="scope"></a>      <p>    A potential negative outcome from the use of a medicinal product.     This is part of the definional information about a product and is not realted to any particular actual use of a medication.    See also <a href="/docs/api/fhir/resources/adverseevent">AdverseEvent</a>, which is for actual events (or near misses), and <a href="/docs/api/fhir/resources/allergyintolerance">AllergyIntolerance</a>.   </p>  </div>
+    </TabItem>
+  
+  
+  <TabItem value="referencedBy" label="Referenced By">
+    <ul><li><a href="/docs/api/fhir/resources/medicinalproductindication">MedicinalProductIndication</a></li></ul>
+    </TabItem>
+
+</Tabs>

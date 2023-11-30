@@ -1,0 +1,28 @@
+---
+title: Population
+sidebar_position: 25
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import definition from '@site/static/data/datatypeDefinitions/population.json';
+import { ResourcePropertiesTable, SearchParamsTable } from '@site/src/components/ResourceTables';
+
+# Population
+
+Base <a href="/docs/api/fhir/resources/structuredefinition">StructureDefinition</a> for <a href="/docs/api/fhir/datatypes/population">Population</a> Type: A populatioof people with some set of grouping criteria.
+
+<Tabs queryString="section">
+<TabItem value="schema" label="Schema" default>
+
+## Properties
+
+<ResourcePropertiesTable
+  properties={definition.properties.filter((p) => !(p.inherited && p.base.includes('Resource')))}
+/>
+
+</TabItem>
+  
+
+
+</Tabs>
