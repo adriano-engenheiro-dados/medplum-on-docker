@@ -1,5 +1,4 @@
 FROM node:20-slim
-RUN apt-get update && apt-get install -y git
 COPY . /usr/src/medplum
 WORKDIR /usr/src/medplum
 RUN npm ci
