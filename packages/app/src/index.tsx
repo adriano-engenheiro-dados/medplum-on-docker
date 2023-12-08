@@ -29,7 +29,7 @@ export async function initApp(): Promise<void> {
     baseUrl: config.baseUrl,
     clientId: config.clientId,
     cacheTime: 60000,
-    autoBatchTime: 1000,
+    autoBatchTime: 100,
     onUnauthenticated: () => {
       if (window.location.pathname !== '/signin' && window.location.pathname !== '/oauth') {
         window.location.href = '/signin?next=' + encodeURIComponent(window.location.pathname + window.location.search);
