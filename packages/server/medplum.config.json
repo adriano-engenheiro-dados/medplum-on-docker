@@ -24,6 +24,7 @@
   "botLambdaLayerName": "medplum-bot-layer",
   "allowedOrigins": "*",
   "introspectionEnabled": true,
+  "registerEnabled": false,
   "database": {
     "host": "postgres",
     "port": 5432,
