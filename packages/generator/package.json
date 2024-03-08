@@ -1,0 +1,41 @@
+{
+  "name": "@medplum/generator",
+  "version": "3.0.9",
+  "description": "Medplum Code Generator",
+  "homepage": "https://www.medplum.com/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medplum/medplum.git",
+    "directory": "packages/generator"
+  },
+  "license": "Apache-2.0",
+  "author": "Medplum <hello@medplum.com>",
+  "scripts": {
+    "baseschema": "ts-node src/baseschema.ts",
+    "benchmark": "ts-node src/benchmarks.ts",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "docs": "ts-node src/docs.ts",
+    "generate": "ts-node src/index.ts && ts-node src/jsonschema.ts && ts-node src/baseschema.ts",
+    "migrate": "ts-node src/migrate.ts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@medplum/core": "3.0.9",
+    "@medplum/definitions": "3.0.9",
+    "@medplum/fhirtypes": "3.0.9",
+    "@types/json-schema": "7.0.15",
+    "@types/pg": "8.11.2",
+    "@types/unzipper": "0.10.9",
+    "fast-xml-parser": "4.3.5",
+    "fhirpath": "3.10.1",
+    "mkdirp": "3.0.1",
+    "node-stream-zip": "1.15.0",
+    "pg": "8.11.3",
+    "tinybench": "2.6.0",
+    "unzipper": "0.10.14"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
