@@ -20,7 +20,8 @@ services:
       - '5432'
   redis:
     container_name: redis
-    image: redis:6
+    image: redis:7
+    restart: always
     networks:
       - medplum_network
     command: redis-server --requirepass medplum
